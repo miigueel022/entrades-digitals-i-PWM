@@ -9,24 +9,16 @@
 
 
  //******  Variables  *****************************************************
- const int pinLED1 = 0;
- const int pinLED2 = 0;
- const int pinLED3 = 0;
- const int pinLED4 = 0;
- const int pinLED5 = 0;
- const int pinLED6 = 0;
- const int pinLED7 = 0;
- const int pinLED8 = 0;
- int LED1 = 0;
- int LED2 = 0;
- int LED3 = 0;
- int LED4 = 0;
- int LED5 = 0;
- int LED6 = 0;
- int LED7 = 0;
- int LED8 = 0;
- int POTENCIOMETRE = 0;
+ const int pinLED1 = 5;
+ const int pinLED2 = 6;
+ const int pinLED3 = 7;
+ const int pinLED4 = 8;
+ const int pinLED5 = 9;
+ const int pinLED6 = 10;
+ const int pinLED7 = 11;
+ const int pinLED8 = 12;
  int valorPotenciometre = 0;
+ 
  //******  Setup  *****************************************************
  void setup () {
    
@@ -45,26 +37,150 @@
  
  //******  Loop  *****************************************************
  
- void loop () {
+ void loop () 
+ {
    valorPotenciometre = analogRead(A0);
-   LED1 = map(valorPotenciometre, 2, 1023, 0, 255);
-   LED2 = map(valorPotenciometre, 2, 1023, 0, 255);
-   LED3 = map(valorPotenciometre, 2, 1023, 0, 255);
-   LED4 = map(valorPotenciometre, 2, 1023, 0, 255);
-   LED5 = map(valorPotenciometre, 2, 1023, 0, 255);
-   LED6 = map(valorPotenciometre, 2, 1023, 0, 255);
-   LED7 = map(valorPotenciometre, 2, 1023, 0, 255);
-   LED8 = map(valorPotenciometre, 2, 1023, 0, 255);
-   analogWrite(5,LED1);
-   analogWrite(6,LED2);
-   analogWrite(7,LED3);
-   analogWrite(8,LED4);
-   analogWrite(9,LED5);
-   analogWrite(10,LED6);
-   analogWrite(11,LED7);
-   analogWrite(12,LED8);
+   valorPotenciometre = map(valorPotenciometre, 0, 1023, 0, 10);
+if (valorPotenciometre == 0)
+{
+   digitalWrite(pinLED1, LOW);
+   digitalWrite(pinLED2, LOW);
+   digitalWrite(pinLED3, LOW);
+   digitalWrite(pinLED4, LOW);
+   digitalWrite(pinLED5, LOW);
+   digitalWrite(pinLED6, LOW);
+   digitalWrite(pinLED7, LOW);
+   digitalWrite(pinLED8, LOW);
    delay(100);
+  } 
+  if (valorPotenciometre == 1)
+{
+   digitalWrite(pinLED1, HIGH);
+   digitalWrite(pinLED2, LOW);
+   digitalWrite(pinLED3, LOW);
+   digitalWrite(pinLED4, LOW);
+   digitalWrite(pinLED5, LOW);
+   digitalWrite(pinLED6, LOW);
+   digitalWrite(pinLED7, LOW);
+   digitalWrite(pinLED8, LOW);
+   delay(100);
+  } 
+    if (valorPotenciometre == 2)
+{
+   digitalWrite(pinLED1, HIGH);
+   digitalWrite(pinLED2, HIGH);
+   digitalWrite(pinLED3, LOW);
+   digitalWrite(pinLED4, LOW);
+   digitalWrite(pinLED5, LOW);
+   digitalWrite(pinLED6, LOW);
+   digitalWrite(pinLED7, LOW);
+   digitalWrite(pinLED8, LOW);
+   delay(100);
+  } 
    
+     if (valorPotenciometre == 3)
+{
+   digitalWrite(pinLED1, HIGH);
+   digitalWrite(pinLED2, HIGH);
+   digitalWrite(pinLED3, HIGH);
+   digitalWrite(pinLED4, LOW);
+   digitalWrite(pinLED5, LOW);
+   digitalWrite(pinLED6, LOW);
+   digitalWrite(pinLED7, LOW);
+   digitalWrite(pinLED8, LOW);
+   delay(100);
+  } 
+     
+      if (valorPotenciometre == 4)
+{
+   digitalWrite(pinLED1, HIGH);
+   digitalWrite(pinLED2, HIGH);
+   digitalWrite(pinLED3, HIGH);
+   digitalWrite(pinLED4, HIGH);
+   digitalWrite(pinLED5, LOW);
+   digitalWrite(pinLED6, LOW);
+   digitalWrite(pinLED7, LOW);
+   digitalWrite(pinLED8, LOW);
+   delay(100);
+  } 
+  
+    if (valorPotenciometre == 5)
+{
+   digitalWrite(pinLED1, HIGH);
+   digitalWrite(pinLED2, HIGH);
+   digitalWrite(pinLED3, HIGH);
+   digitalWrite(pinLED4, HIGH);
+   digitalWrite(pinLED5, HIGH);
+   digitalWrite(pinLED6, LOW);
+   digitalWrite(pinLED7, LOW);
+   digitalWrite(pinLED8, LOW);
+   delay(100);
+  } 
+  
+      if (valorPotenciometre == 6)
+{
+   digitalWrite(pinLED1, HIGH);
+   digitalWrite(pinLED2, HIGH);
+   digitalWrite(pinLED3, HIGH);
+   digitalWrite(pinLED4, HIGH);
+   digitalWrite(pinLED5, HIGH);
+   digitalWrite(pinLED6, HIGH);
+   digitalWrite(pinLED7, LOW);
+   digitalWrite(pinLED8, LOW);
+   delay(100);
+  } 
+  
+     if (valorPotenciometre == 7)
+{
+   digitalWrite(pinLED1, HIGH);
+   digitalWrite(pinLED2, HIGH);
+   digitalWrite(pinLED3, HIGH);
+   digitalWrite(pinLED4, HIGH);
+   digitalWrite(pinLED5, HIGH);
+   digitalWrite(pinLED6, HIGH);
+   digitalWrite(pinLED7, HIGH);
+   digitalWrite(pinLED8, LOW);
+   delay(100);
+  } 
+  
+       if (valorPotenciometre == 8)
+{
+   digitalWrite(pinLED1, HIGH);
+   digitalWrite(pinLED2, HIGH);
+   digitalWrite(pinLED3, HIGH);
+   digitalWrite(pinLED4, HIGH);
+   digitalWrite(pinLED5, HIGH);
+   digitalWrite(pinLED6, HIGH);
+   digitalWrite(pinLED7, HIGH);
+   digitalWrite(pinLED8, HIGH);
+   delay(100);
+  } 
+  
+       if (valorPotenciometre == 9)
+{
+   digitalWrite(pinLED1, HIGH);
+   digitalWrite(pinLED2, HIGH);
+   digitalWrite(pinLED3, HIGH);
+   digitalWrite(pinLED4, HIGH);
+   digitalWrite(pinLED5, LOW);
+   digitalWrite(pinLED6, LOW);
+   digitalWrite(pinLED7, LOW);
+   digitalWrite(pinLED8, LOW);
+   delay(100);
+  } 
+  
+     if (valorPotenciometre == 10)
+{
+   digitalWrite(pinLED1, LOW);
+   digitalWrite(pinLED2, LOW);
+   digitalWrite(pinLED3, LOW);
+   digitalWrite(pinLED4, LOW);
+   digitalWrite(pinLED5, LOW);
+   digitalWrite(pinLED6, LOW);
+   digitalWrite(pinLED7, LOW);
+   digitalWrite(pinLED8, LOW);
+   delay(100);
+  } 
  }
    
    
